@@ -1,0 +1,110 @@
+/* ============================================================
+   1. VARIABLES ET RÉGLAGES GÉNÉRAUX
+   ============================================================ */
+html {
+    scroll-behavior: smooth; /* Pour une navigation fluide entre les sections */
+}
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ============================================================
+   2. EN-TÊTE ET NAVIGATION (HEADER)
+   ============================================================ */
+.navbar {
+    border-bottom: 1px solid #eee;
+}
+
+/* Style spécifique pour le titre/logo dans la navigation */
+.navbar-brand {
+    color: #0d6efd !important; /* Remplace ce code HEX par ta couleur (ex: #ff5733 pour du orange) */
+    font-size: 1.5rem;         /* Optionnel : pour ajuster la taille */
+    text-transform: uppercase; /* Pour un look plus pro */
+    transition: color 0.3s ease; /* Transition douce si on change de couleur au survol */
+}
+
+/* Changement de couleur au survol du titre */
+.navbar-brand:hover {
+    color: #000000 !important; /* Le titre devient noir quand on passe la souris dessus */
+}
+
+/* Style des liens du menu au survol */
+.nav-link:hover {
+    color: #0d6efd !important;
+}
+
+/* ============================================================
+   3. SECTION PRODUITS (CARDS)
+   ============================================================ */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 12px; /* Arrondis modernes */
+    overflow: hidden;
+}
+
+/* Effet "Attrayant" au survol comme demandé */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Ajustement des images pour qu'elles soient uniformes */
+.card-img-top {
+    height: 220px;
+    object-fit: cover; /* Recadre l'image sans la déformer */
+}
+
+/* Style du bouton "Acheter" */
+.btn-dark {
+    padding: 10px;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+/* ============================================================
+   4. PIED DE PAGE (FOOTER AFFINÉ)
+   ============================================================ */
+footer {
+    font-size: 0.9rem;
+}
+
+footer a {
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: #0d6efd !important;
+}
+
+/* ============================================================
+   5. CONCEPTION RÉACTIVE (MEDIA QUERIES)
+   ============================================================ */
+
+/* Ajustements pour les écrans Mobiles (moins de 576px) */
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+    
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    /* On réduit les marges pour gagner de la place sur petit écran */
+    .my-5 {
+        margin-top: 2rem !important;
+        margin-bottom: 2rem !important;
+    }
+}
+
+/* Ajustements pour les Tablettes (entre 576px et 992px) */
+@media (max-width: 991px) {
+    .card-img-top {
+        height: 180px; /* On réduit un peu la hauteur des images */
+    }
+}
